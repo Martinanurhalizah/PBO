@@ -1,0 +1,46 @@
+class Mobil:
+    def __init__(self, warna, merk, tahun):
+        self.__warna = warna
+        self.__merk = merk
+        self.__tahun = tahun
+
+    def maju(self):
+        print(f"Mobil {self.__merk} berwarna {self.__warna} tahun {self.__tahun} berjalan maju ke jalan raya")
+
+    def mundur(self):
+        print(f"Mobil {self.__merk} masuk patkiran dengan jalan mundur")
+
+    def getWarna(self):
+        return self.__warna
+
+    def setWarna(self, warna):
+        self.__warna = warna
+
+    def getMerk(self):
+        return self.__merk
+
+    def setMerk(self, merk):
+        self.__merk = merk
+
+    def getTahun(self):
+        return self.__tahun
+
+    def setTahun(self, tahun):
+        self.__tahun = tahun
+
+mobil_aing = Mobil("Pink", "Toyota Supra", 1993)
+
+print(mobil_aing.getWarna()) # output: Pink
+mobil_aing.setWarna("Purple")
+print(mobil_aing.getWarna()) # output: Purple
+
+print(mobil_aing.getMerk()) # output: Toyota Supra
+mobil_aing.setMerk("Nissan GTR")
+print(mobil_aing.getMerk()) # output: Nissan GTR
+
+print(mobil_aing.getTahun()) # output: 1993
+mobil_aing.setTahun(2022)
+print(mobil_aing.getTahun()) # output: 2022
+
+mobil_aing.maju()
+mobil_aing.mundur()
